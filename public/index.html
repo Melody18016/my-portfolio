@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Purebreeze · 作品集</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 导航 -->
+  <nav id="navbar">
+    <div class="logo">PB<span>.</span></div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <ul id="navMenu">
+      <li><a href="#home">首页</a></li>
+      <li><a href="#about">关于</a></li>
+      <li><a href="#skills">技能</a></li>
+      <li><a href="#works">作品</a></li>
+      <li><a href="#timeline">经历</a></li>
+      <li><a href="#contact">联系</a></li>
+      <li><button onclick="adminLogin()" class="admin-btn">管理</button></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" class="avatar">
+      <h1>你好，我是<span class="highlight">Purebreeze</span> 👋</h1>
+      <p class="subtitle">前端开发者 / 全栈探索者 / 终身学习者</p>
+      <div class="cta-group">
+        <a href="#works" class="btn btn-primary">查看作品</a>
+        <a href="#contact" class="btn btn-outline">联系我</a>
+      </div>
+      <div id="visitCount" class="visit-badge">加载中...</div>
+    </div>
+    <div class="scroll-hint">↓ 向下滚动</div>
+  </section>
+
+  <!-- 关于我 -->
+  <section id="about" class="section">
+    <h2 class="section-title">关于我</h2>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>我是一名正在成长中的开发者，热爱用代码创造有趣的东西。</p>
+        <p>从第一个网页到现在能搭全栈项目，每一步都充满成就感。喜欢简洁的设计、优雅的代码和好用的产品。</p>
+        <p>目前正在学习更多后端技术和 AI 应用开发。</p>
+      </div>
+      <div class="about-stats">
+        <div class="stat"><span class="stat-num">12</span><span class="stat-label">完成项目</span></div>
+        <div class="stat"><span class="stat-num">3</span><span class="stat-label">技术栈</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">学习热情</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 技能 -->
+  <section id="skills" class="section bg-gray">
+    <h2 class="section-title">技能</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon">🎨</div>
+        <h3>前端</h3>
+        <p>HTML / CSS / JavaScript</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">⚙️</div>
+        <h3>后端</h3>
+        <p>Node.js / Express</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🛠️</div>
+        <h3>工具</h3>
+        <p>VS Code / Git / GitHub</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon">🤖</div>
+        <h3>AI</h3>
+        <p>API 接入 / 提示词工程</p>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作品集 -->
+  <section id="works" class="section">
+    <h2 class="section-title">作品集</h2>
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterWorks('all', this)">全部</button>
+      <button class="filter-btn" onclick="filterWorks('web', this)">网页</button>
+      <button class="filter-btn" onclick="filterWorks('tool', this)">工具</button>
+      <button class="filter-btn" onclick="filterWorks('game', this)">小游戏</button>
+    </div>
+    <div class="works-grid" id="worksGrid"></div>
+  </section>
+
+  <!-- 经历时间线 -->
+  <section id="timeline" class="section bg-gray">
+    <h2 class="section-title">经历</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>🚀 全栈项目上线</h3>
+          <span class="time">2026</span>
+          <p>完成个人作品集网站并部署到公网，支持访客计数和留言板。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>📚 系统学习前端</h3>
+          <span class="time">2025</span>
+          <p>从 HTML/CSS 起步，逐步掌握 JavaScript 和前后端交互。</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>💡 第一个网页</h3>
+          <span class="time">2024</span>
+          <p>用 VS Code 写出第一个可交互网页。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 留言板 -->
+  <section id="contact" class="section">
+    <h2 class="section-title">💬 留言板</h2>
+    <div class="message-box">
+      <input type="text" id="msgInput" placeholder="说点什么吧...">
+      <button onclick="postMessage()">发送</button>
+    </div>
+    <ul id="messageList" class="message-list"></ul>
+  </section>
+
+  <!-- 页脚 -->
+  <footer>
+    <p>© 2026 Purebreeze · Built with Node.js & ❤️</p>
+    <p class="footer-links">
+      <a href="#">GitHub</a> |
+      <a href="#">Email</a> |
+      <a href="#">微信</a>
+    </p>
+  </footer>
+
+  <!-- 作品弹窗 -->
+  <div id="modal" class="modal" onclick="closeModal()">
+    <div class="modal-content" onclick="event.stopPropagation()">
+      <span class="modal-close" onclick="closeModal()">×</span>
+      <h2 id="modalTitle"></h2>
+      <p id="modalDesc"></p>
+      <a id="modalLink" href="#" target="_blank" class="btn btn-primary">查看项目</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

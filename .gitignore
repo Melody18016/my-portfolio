@@ -1,0 +1,12 @@
+# 忽略Node.js依赖文件夹（体积超大，不用传GitHub，别人拉代码后npm install自动生成）
+node_modules/
+
+# 忽略环境变量文件（以后存API密钥、密码用，绝对不能传GitHub）
+.env
+
+# 忽略系统缓存文件
+.DS_Store
+Thumbs.db
+
+# 忽略日志文件
+*.log
