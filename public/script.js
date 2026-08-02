@@ -6,11 +6,6 @@ const works = [
     tagLabels: ["HTML", "CSS"]
   },
   {
-    id: 2, title: "点击计数器", desc: "前后端打通的第一个项目，数据持久化到 JSON 文件。",
-    icon: "🔢", tags: ["web", "tool"], link: "#", cat: "tool",
-    tagLabels: ["Node.js", "Express"]
-  },
-  {
     id: 3, title: "作品集网站", desc: "你正在看的这个网站，支持移动端适配和项目管理。",
     icon: "🎨", tags: ["web"], link: "#", cat: "web",
     tagLabels: ["全栈", "响应式"]
@@ -20,16 +15,6 @@ const works = [
     icon: "🐍", tags: ["game"], link: "#", cat: "game",
     tagLabels: ["JS", "Canvas"]
   },
-  {
-    id: 5, title: "待办清单", desc: "支持增删改查和本地存储的待办应用。",
-    icon: "✅", tags: ["tool", "web"], link: "#", cat: "tool",
-    tagLabels: ["JS", "LocalStorage"]
-  },
-  {
-    id: 6, title: "2048", desc: "经典数字合并游戏，纯前端实现。",
-    icon: "🎮", tags: ["game"], link: "#", cat: "game",
-    tagLabels: ["JS", "CSS Grid"]
-  }
 ];
 
 // ===== 渲染作品 =====
