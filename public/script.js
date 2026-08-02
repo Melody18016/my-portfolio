@@ -1,9 +1,14 @@
 // ===== 作品数据 =====
 const works = [
   {
-    id: 1, title: "个人主页 v1", desc: "我的第一个纯前端个人主页，用 HTML+CSS 实现。",
-    icon: "🌐", tags: ["web"], link: "#", cat: "web",
-    tagLabels: ["HTML", "CSS"]
+  id: 1,
+  title: "Purebreeze 个人主页",
+  desc: "我的总入口：作品集、动态、联系方式都在这里。",
+  icon: "🌬️",
+  tags: ["web"],
+  link: "https://purebreeze-home-production.up.railway.app/", // ← 改这里
+  cat: "web",
+  tagLabels: ["主页", "总入口"]
   },
   {
     id: 3, title: "作品集网站", desc: "你正在看的这个网站，支持移动端适配和项目管理。",
